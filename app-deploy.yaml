@@ -63,13 +63,13 @@ metadata:
     version: 0.2.10
   creationTimestamp: null
   labels:
-    image.opencontainers.org/title: nodejs-express-0-3-5
+    image.opencontainers.org/title: myapp-tekton
     stack.appsody.dev/id: nodejs-express
     stack.appsody.dev/version: 0.2.10
-  name: nodejs-express-0-3-5
-  namespace: kabanero-samples
+  name: myapp-tekton
+  namespace: myapp-tekton
 spec:
-  applicationImage: dev.local/nodejs-express-0-3-5
+  applicationImage: dev.local/myapp-tekton
   createKnativeService: false
   expose: true
   livenessProbe:
@@ -81,7 +81,7 @@ spec:
     periodSeconds: 2
   monitoring:
     labels:
-      k8s-app: nodejs-express-0-3-5
+      k8s-app: myapp-tekton
   readinessProbe:
     failureThreshold: 12
     httpGet:
